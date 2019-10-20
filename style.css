@@ -161,6 +161,11 @@ h2 {
     text-decoration: underline;
 }
 
+.slider__click {
+    font-size: 35px;
+    text-decoration: underline;
+}
+
 .education__block {
     margin-bottom: 90px;
 }
@@ -178,4 +183,9 @@ h3 {
 
 .slider__item {
     padding: 50px;
+}
+
+.slider__img {
+    display: flex;
+    flex-direction: column;
 }
