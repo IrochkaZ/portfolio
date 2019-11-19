@@ -5,14 +5,11 @@ const eduButtonlistner = () => {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-
 eduButton.addEventListener('click', eduButtonlistner);
 
-
-
-var multiItemSlider = (function () {
+const multiItemSlider = (function () {
     return function (selector, config) {
-        var
+        let
             sliderWrapper = document.querySelector('.slider__wrapper'),
             sliderItems = document.querySelectorAll('.slider__item'),
             sliderControls = document.querySelectorAll('.slider__control'),
@@ -29,12 +26,12 @@ var multiItemSlider = (function () {
             items.push({ item: item, position: index, transform: 0 });
         });
 
-        var position = {
+        const position = {
             getMin: 0,
             getMax: items.length - 1,
         }
 
-        var transformItem = function (direction) {
+        const transformItem = function (direction) {
             if (direction === 'right') {
                 if ((positionLeftItem + wrapperWidth / itemWidth - 1) >= position.getMax) {
                     return;
@@ -65,13 +62,13 @@ var multiItemSlider = (function () {
         }
 
 
-        var controlClick = function (e) {
+        const controlClick = function (e) {
             var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
             e.preventDefault();
             transformItem(direction);
         };
 
-        var setUpListeners = function () {
+        const setUpListeners = function () {
             sliderControls.forEach(function (item) {
                 item.addEventListener('click', controlClick);
             });
@@ -92,4 +89,4 @@ var multiItemSlider = (function () {
     }
 }());
 
-var slider = multiItemSlider('.slider')
+const slider = multiItemSlider('.slider')
