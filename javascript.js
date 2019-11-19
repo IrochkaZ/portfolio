@@ -6,7 +6,7 @@ const multiItemSlider = (function () {
     }
     eduButton.addEventListener('click', eduButtonlistner);
 
-        return function (selector, config) {
+        return (selector, config) => {
             let
                 sliderWrapper = document.querySelector('.slider__wrapper'),
                 sliderItems = document.querySelectorAll('.slider__item'),
@@ -69,10 +69,10 @@ const multiItemSlider = (function () {
             }
             setUpListeners();
             return {
-                right: function () {
+                right:  ()=> {
                     transformItem('right');
                 },
-                left: function () {
+                left: ()=> {
                     transformItem('left');
                 }
             }

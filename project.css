@@ -19,6 +19,7 @@
 }
 
 .back, .mobile{
+opacity: 0.8;
 font-size: 25px;
 color: #ffffff;
 text-transform: uppercase;
