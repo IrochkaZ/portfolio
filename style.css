@@ -42,8 +42,10 @@ i.fab.fa-linkedin {
 }
 
 .education__schedule:hover {
-    background-color: darkgray;
+    background-color:#551A8B;
     cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.8;
 }
 
 picture {
